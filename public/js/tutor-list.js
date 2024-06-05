@@ -1,7 +1,8 @@
 // Create variables that will pull the desired HTML
 const cardContainer = document.querySelector(".container");
 const card = getElementsByClassName("card mb-2");
-const cardRow = getElementsByClassName("row g-2");
+const cardRowAllCards = getElementsByClassName("row mt-2 g-3");
+const cardRows = getElementsByClassName("row g-4");
 
 
 
