@@ -1,78 +1,57 @@
 // Create variables that will pull the desired HTML
-// This selects the container and everything inside - so I might be able to delete these other variables as they might not be necessary
-const cardContainer = document.querySelector(".container");
-console.log(cardContainer)
-// This selects the card mb-2 and the row g-4
-const card = document.querySelector(".card");
-console.log(card)
-// Since this is the main row that holds all the cards - this also pretty much selects everything so we might not need this
-const cardRowAllCards = document.querySelector(".row");
-console.log(cardRowAllCards)
+
+const userCardRow = document.querySelector(".user-card");
 
 // Function needs to be created that will retrieve tutors from local storage
 // There needs to be a function created to store Tutor search list
 
-// After search is made card will be created dynamically
-const tutorCard = document.createElement('div');
-tutorCard.setAttribute('class', 'card');
-console.log(tutorCard)
-const cardImage = document.createElement('img');
-cardImage.setAttribute('class', 'col-md-4');
-console.log(cardImage)
-const cardTutorName = document.createElement('h5');
-console.log(cardTutorName)
-const tutorInstrument = document.createElement('p');
-console.log(tutorInstrument) // Can add italic style to font
-const cardTutorLocation = document.createElement('p');
-console.log(cardTutorLocation) // There's a margin and space to edit here
-const cardContactInfo = document.createElement('h6');
-console.log(cardContactInfo)
-const tutorEmail = document.createElement('h6');
-console.log(tutorEmail);
-const tutorPhone = document.createElement('h6');
-console.log(tutorPhone)
-
-
-
-
-// card.append(tutorCard);
-// console.log(card)
-
-// card.append(cardTutorName, cardTutorLocation, tutorInstrument, cardContactInfo);
-// console.log(tutorCard)
-
-// Variables to store empty string so that when data is entered by the user in the registration it will populate on the card
-const tName = 'Tutor Name';
-cardTutorName.textContent = tName;
-// cardTutorName.setAttribute()
-console.log(cardTutorName);
-
-const tInstrument = 'Instrument';
-tutorInstrument.textContent = tInstrument;
-console.log(tutorInstrument);
-
-const tLocation = 'Location';
-cardTutorLocation.textContent = tLocation;
-console.log(cardTutorLocation);
-
-const cInfo = 'Contact Info';
-cardContactInfo.textContent = cInfo;
-console.log(cardContactInfo);
-
-const tEmail = 'Email:';
-tutorEmail.textContent = tEmail;
-console.log(tutorEmail);
-
-const tPhone = 'Phone:';
-tutorPhone.textContent = tPhone;
-console.log(tutorPhone);
-
-// Append elements to the tutorCard
-tutorCard.append(cardImage, cardTutorName, tutorInstrument, cardTutorLocation, cardContactInfo, tutorEmail, tutorPhone);
-
-// Append the tutorCard to the container
-cardContainer.append(tutorCard);
-
-// Adjust classes and styles so the card will display correctly on the page
-
-// Clear contents of the card
+// This will provide a way to dynamically display each card
+function createCard(user) {
+  const card = `<div class="col-12 col-md-6 col-lg-4">
+            <div class="card mb-2">
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <img
+                            src="https://mdbcdn.b-cdn.net/img/new/avatars/5.webp"
+                            class="rounded-circle shadow-1-strong my-5"
+                            style="width: 80px;"
+                            alt="Avatar"
+                        >
+                            <h5>${user}</h5>
+                            <p style="font-style: italic;">${user}</p>
+                            <p>${user} PA</p>
+                            <i class="far fa-edit mb-2"></i>
+                    </div>
+                    <div class="col-md-8">
+                        <h6>Contact Info:</h6>
+                        <hr class="mt-0 mb-4">
+                            <div class="row pt-2">
+                                <div class="col-6 mb-3">
+                                    <h6>Email</h6>
+                                    <p class="text-muted">${user}</p>
+                                </div>
+                                <div class="col-6 mb-3">
+                                    <h6>Phone:</h6>
+                                    <p class="text-muted">${user}</p>
+                                </div>
+                            </div>
+                            <h6>Specialties:</h6>
+                            <hr class="mt-0 mb-4">
+                                <div class="row pt-1">
+                                    <div class="col-6 mb-3">
+                                        <h6>Instruments</h6>
+                                        <p class="text-muted">${user}</p>
+                                    </div>
+                                    <div class="col-6 mb-3">
+                                        <h6>Tutoring location:</h6>
+                                        <p class="text-muted">${user}</p>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>`;
+  userCardRow.innerHTML += card;
+}
+// Router.get to fetch the data from the API that we created
+// Fetch request will be needed to fetch the data from registration to display on the cards
