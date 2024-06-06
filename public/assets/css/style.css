@@ -25,6 +25,12 @@ body {
     background-color: #f4f5f7;
 }
 
+.col-md-4 {
+    text-align: center;
+    border-top-left-radius: .5rem;
+    border-bottom-left-radius: .5rem;
+}
+
 #header a {
     color: var(--clr-accent1);
     font-weight: 400;
