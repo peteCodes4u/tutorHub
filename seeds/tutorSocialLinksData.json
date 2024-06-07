@@ -1,0 +1,52 @@
+[
+    {
+        "tutor_id": 1,
+        "platform": "Website",
+        "link": "https://github.com/peteCodes4u?tab=repositories"
+    },
+    {
+        "tutor_id": 1,
+        "platform": "Facebook",
+        "link": "https://github.com/peteCodes4u?tab=repositories"
+    },
+    {
+        "tutor_id": 1,
+        "platform": "Instagram",
+        "link": "https://github.com/peteCodes4u?tab=repositories"
+    },
+    {
+        "tutor_id": 1,
+        "platform": "TikToK",
+        "link": "https://github.com/peteCodes4u?tab=repositories"
+    },
+    {
+        "tutor_id": 1,
+        "platform": "Youtube",
+        "link": "https://github.com/peteCodes4u?tab=repositories"
+    },
+    {
+        "tutor_id": 1,
+        "platform": "Other",
+        "link": "https://github.com/peteCodes4u?tab=repositories"
+    },
+    {
+        "tutor_id": 2,
+        "platform": "Website",
+        "link": "https://github.com/peteCodes4u?tab=repositories"
+    },
+    {
+        "tutor_id": 3,
+        "platform": "Website",
+        "link": "https://github.com/peteCodes4u?tab=repositories"
+    },
+    {
+        "tutor_id": 4,
+        "platform": "Website",
+        "link": "https://github.com/peteCodes4u?tab=repositories"
+    },
+    {
+        "tutor_id": 5,
+        "platform": "Website",
+        "link": "https://github.com/peteCodes4u?tab=repositories"
+    }
+]

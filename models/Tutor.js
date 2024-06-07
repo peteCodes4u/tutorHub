@@ -27,8 +27,7 @@ Tutor.init(
         key: 'id'
       },
     },
-
-    profileImage: {
+    profile_image: {
       type: DataTypes.STRING,
       allowNull: true,
     },
@@ -40,11 +39,14 @@ Tutor.init(
       type: DataTypes.STRING,
       allowNull: true,
     },
-    lessonSetting: {
+    lesson_setting: {
       type: DataTypes.STRING,
       allowNull: true,
     },
-   
+   price: {
+    type: DataTypes.STRING,
+    allowNull: false,
+   },
   },
   
   {

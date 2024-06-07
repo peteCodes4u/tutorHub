@@ -20,7 +20,7 @@ Student.init(
                 key: 'id'
               },
         },
-        proflieImage: {
+        proflie_image: {
             type: DataTypes.STRING,
             allowNull: true,
         }

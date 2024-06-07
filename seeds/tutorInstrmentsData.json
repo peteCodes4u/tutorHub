@@ -1,0 +1,34 @@
+[
+    {
+        "tutor_id": 1,
+        "instrument_id": 5
+    },
+    {
+        "tutor_id": 2,
+        "instrument_id": 7
+    },
+    {
+        "tutor_id": 3,
+        "instrument_id": 11
+    },
+    {
+        "tutor_id": 4,
+        "instrument_id": 9
+    },
+    {
+        "tutor_id": 5,
+        "instrument_id": 6
+    },
+    {
+        "tutor_id": 5,
+        "instrument_id": 2
+    },
+    {
+        "tutor_id": 5,
+        "instrument_id": 3
+    },
+    {
+        "tutor_id": 5,
+        "instrument_id": 9
+    }
+]

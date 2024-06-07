@@ -2,10 +2,7 @@ const User = require('./User');
 const Tutor = require('./Tutor');
 const Student = require('./Student');
 const Certifications = require('./Certifications');
-const Comments = require('./Comments');
-const Favorites = require('./Favorites');
 const Instrument = require('./Instrument');
-const SocialLinks = require('./SocialLinks');
 const Specialties = require('./Specialties');
 const StudentFavorites = require('./StudentFavorites');
 const TutorCertifications = require('./TutorCertifications');
@@ -41,23 +38,52 @@ Instrument.belongsToMany(Tutor, {
 Tutor.belongsToMany(Instrument, {
     through: TutorInstrument,
     foreignKey: 'tutor_id',
+});
+
+// Tutors has many Social links 
+Tutor.hasMany(TutorSocialLinks, {
+    foreignKey: 'tutor_id',
+});
+
+// Tutors belongToMany specialties (throught TutorSpecialties)
+Tutor.belongsToMany(Specialties, {
+    through: TutorSpecialties,
+    foreignKey: 'tutor_id',
+});
+
+// specialties belong to many tutors (throught TutorSpecialties)
+Specialties.belongsToMany(Tutor, {
+    through: TutorSpecialties,
+    foreignKey: 'specialty_id'
+});
+
+// Tutors belongToMany Certifications (through TutorCertifications)
+Tutor.belongsToMany(Certifications, {
+    through: TutorCertifications,
+    foreignKey: 'tutor_id',
+});
+
+// Certifications belongToMany Tutors (throught TutorCertifications)
+Certifications.belongsToMany(Tutor, {
+    throught: TutorCertifications,
+    foreignKey: 'certification_id'
 })
 
-// Tutors have many SocialLinks
-// Tutors have many Specialties
-// Tutors have many Certifications
 // Tutors have many Comments
+Tutor.hasMany(TutorComments, {
+    foreignKey: 'tutor_id'
+});
 // Students have many Favorites
+Student.hasMany(StudentFavorites, {
+    foreignKey: 'tutor_id'
+});
 
 module.exports = { 
     User,
     Tutor,
     Student,
     Certifications,
-    Comments,
-    Favorites,
     Instrument,
-    SocialLinks,
     Specialties,
     StudentFavorites,
     TutorCertifications,
