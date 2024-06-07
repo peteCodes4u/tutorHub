@@ -19,6 +19,7 @@ body {
     height: 100px;
     width: 100px;
 }
+
 /* Joe added this code for cards to keep the cards all the same height */
 .card-deck {
     display: flex;
@@ -37,13 +38,15 @@ body {
 }
 
 .carousel-item img {
-    width: 100%
+    height: 100%;
+    object-fit: cover;
 }
 
 .hero {
     margin-top: 5vh;
     margin-bottom: 5vh;
     margin-left: 2vh;
+    margin-right: 2vh;
 }
 
 .hero img {
