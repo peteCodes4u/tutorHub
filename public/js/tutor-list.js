@@ -3,40 +3,32 @@ const router = require("express").Router();
 // Create variables that will pull the desired HTML
 
 const userCardRow = document.querySelector(".user-card");
-app.use(express.static("public"));
 
 // Function needs to be created that will retrieve tutors from local storage
 // There needs to be a function created to store Tutor search list
-router.get("/api", withAuth, async (req, res) => {
-  try {
-    const userData = await User.findAll({
-      attributes: { exclude: ["password"] },
-      order: [["name", "ASC"]],
-    });
+// router.get("/api", withAuth, async (req, res) => {
+//   try {
+//     const userData = await User.findAll({
+//       attributes: { exclude: ["password"] },
+//       order: [["name", "ASC"]],
+//     });
 
-    const users = userData.map((project) => project.get({ plain: true }));
+//     const users = userData.map((project) => project.get({ plain: true }));
 
-    res.render("homepage", {
-      users,
-      logged_in: req.session.logged_in,
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+//     res.render("homepage", {
+//       users,
+//       logged_in: req.session.logged_in,
+//     });
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 // This will provide a way to dynamically display each card
-async function createCard(data) {
-  try {
-    const apiData = await fetch("/api");
-    if (!apiData.ok) {
-      throw new Error("Failed to fetch data");
-    }
-    const data = await apiData.json();
-    //   var data = await apiData.json();
-    console.log(data);
-  } catch (error) {
-    console.error("Error:", error);
-  }
+async function createCard(user) {
+  const apiData = await fetch("./api/tutors");
+  var data = await apiData.json();
+  console.log(data);
+
   const card = `<div class="col-12 col-md-6 col-lg-4">
               <div class="card mb-2">
                   <div class="row g-4">
@@ -83,15 +75,9 @@ async function createCard(data) {
               </div>`;
   userCardRow.innerHTML += card;
 }
-createCard()
-  .then((result) => {
-    console.log(result);
-  })
-  .catch((error) => {
-    console.error(error);
-  });
-console.log(createCard);
+async function getTutors(user) {}
 
+app.use("/api/login");
 // Get route to enable register button functionality
 
 router.get("/register", async (req, res) => {
@@ -99,5 +85,5 @@ router.get("/register", async (req, res) => {
 });
 
 // Router.get to fetch the data from the API that we created
-
+router.get();
 module.exports = router;
