@@ -89,10 +89,9 @@
         <div class="row">
           <div id="profile-image" class="col-3 me-5">
             <h3>Profile Image</h3>
-            <img src="./assets/images/Profile-Icons/000.png" class="img-thumbnail mb-2"
-              id="thumbnail-preview" alt="profile image preview" width="150px">
-            <select class="form-select mb-3 normal-text" id="choose-profile-image"
-              aria-label="Default select example">
+            <img src="./assets/images/Profile-Icons/000.png" class="img-thumbnail mb-2" id="thumbnail-preview"
+              alt="profile image preview" width="150px">
+            <select class="form-select mb-3 normal-text" id="choose-profile-image" aria-label="Default select example">
               <option selected>Choose your profile image</option>
               <option>Bass Guitar 1</option>
               <option>Bass Guitar 2</option>
@@ -560,6 +559,67 @@
       </div>
   </main>
 
+  <!-- Registration Modal -->
+  <div class="modal fade" id="staticBackdrop-register" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Which account type?</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <h5>Account Type</h5>
+            <div class="form-check normal-text">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="tutor-radio" value="tutor">
+              <label class="form-check-label" for="tutor-radio">Tutor Account</label>
+            </div>
+            <div class="form-check normal-text">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="student-radio" value="student">
+              <label class="form-check-label" for="student-radio">Student Account</label>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="next">Next</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Login Modal -->
+  <div class="modal fade" id="staticBackdrop-login" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Log In</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form class="form login-form">
+            <div class="form-group">
+              <div>
+                <label for="email">Email Address</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email">
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Password">
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary btn-login submit" id="login-btn">Log In</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Including Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
@@ -567,6 +627,8 @@
   <script src="./js/choose-image.js">
   </script>
   <script src="./js/createProfile.js"></script>
+  <script src="./js/login.js"></script>
+  <script src="./js/user-type-modal.js"></script>
 </body>
 
 </html>
