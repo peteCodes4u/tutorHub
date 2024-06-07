@@ -1,3 +1,5 @@
+const router = require("express").Router();
+
 // Create variables that will pull the desired HTML
 
 const userCardRow = document.querySelector(".user-card");
@@ -6,7 +8,8 @@ const userCardRow = document.querySelector(".user-card");
 // There needs to be a function created to store Tutor search list
 
 // This will provide a way to dynamically display each card
-function createCard(user) {
+async function createCard(user) {
+  const apiData = await fetch("localhost:5000/api/tutors");
   const card = `<div class="col-12 col-md-6 col-lg-4">
             <div class="card mb-2">
                 <div class="row g-4">
@@ -53,5 +56,13 @@ function createCard(user) {
             </div>`;
   userCardRow.innerHTML += card;
 }
+
+// Function to get all tutors
+async function getTutors(user) {}
+// Routes
+app.use("/api/login");
+
 // Router.get to fetch the data from the API that we created
-// Fetch request will be needed to fetch the data from registration to display on the cards
+router.get();
+
+module.exports = router;
