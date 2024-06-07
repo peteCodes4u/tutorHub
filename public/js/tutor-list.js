@@ -9,7 +9,9 @@ const userCardRow = document.querySelector(".user-card");
 
 // This will provide a way to dynamically display each card
 async function createCard(user) {
-  const apiData = router.get();
+  const apiData = await fetch("./api/tutors");
+  var data = await apiData.json();
+  console.log(data);
   const card = `<div class="col-12 col-md-6 col-lg-4">
             <div class="card mb-2">
                 <div class="row g-4">
@@ -20,9 +22,9 @@ async function createCard(user) {
                             style="width: 80px;"
                             alt="Avatar"
                         >
-                            <h5>${user}</h5>
-                            <p style="font-style: italic;">${user}</p>
-                            <p>${user} PA</p>
+                            <h5>${data.firstName}</h5>
+                            <p style="font-style: italic;"></p>
+                            <p>${data.region}</p>
                             <i class="far fa-edit mb-2"></i>
                     </div>
                     <div class="col-md-8">
@@ -31,11 +33,11 @@ async function createCard(user) {
                             <div class="row pt-2">
                                 <div class="col-6 mb-3">
                                     <h6>Email</h6>
-                                    <p class="text-muted">${user}</p>
+                                    <p class="text-muted">${data.email}</p>
                                 </div>
                                 <div class="col-6 mb-3">
                                     <h6>Phone:</h6>
-                                    <p class="text-muted">${user}</p>
+                                    <p class="text-muted">${data.phone}</p>
                                 </div>
                             </div>
                             <h6>Specialties:</h6>
@@ -43,11 +45,11 @@ async function createCard(user) {
                                 <div class="row pt-1">
                                     <div class="col-6 mb-3">
                                         <h6>Instruments</h6>
-                                        <p class="text-muted">${user}</p>
+                                        <p class="text-muted">${data.instruments}</p>
                                     </div>
                                     <div class="col-6 mb-3">
                                         <h6>Tutoring location:</h6>
-                                        <p class="text-muted">${user}</p>
+                                        <p class="text-muted">${data.virtual}</p>
                                     </div>
                                 </div>
                             </div>
