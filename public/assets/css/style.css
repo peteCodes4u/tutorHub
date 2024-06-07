@@ -8,6 +8,7 @@
     --bs-btn-active-border-color: #e1895d;
     --bs-btn-active-bg: #e1895d;
     --bs-btn-active-color: #f5f3ee;
+    --bs-body-color:#212529;
 }
 
 body {
@@ -19,6 +20,7 @@ body {
     height: 100px;
     width: 100px;
 }
+
 /* Joe added this code for cards to keep the cards all the same height */
 .card-deck {
     display: flex;
@@ -37,13 +39,15 @@ body {
 }
 
 .carousel-item img {
-    width: 100%
+    height: 100%;
+    object-fit: cover;
 }
 
 .hero {
     margin-top: 5vh;
     margin-bottom: 5vh;
     margin-left: 2vh;
+    margin-right: 2vh;
 }
 
 .hero img {
@@ -87,4 +91,28 @@ body {
     background-color: var(--clr-light);
     color: var(--clr-dark);
     border-color: transparent;
+}
+
+/* modal related styles */
+.modal-header{
+    color:var(--clr-accent1);
+    background-color: var(--clr-dark);
+}
+
+.modal-body{
+    color:var(--bs-body-color);
+}
+
+.modal-footer{
+    color:var(--clr-accent1);
+    background-color: var(--clr-dark);
+}
+
+/* change mouse cursor to pointer on hover */
+.a:hover{
+cursor:pointer;
+}
+
+#header a:hover{
+    cursor:pointer;
 }
