@@ -91,9 +91,12 @@ createCard()
     console.error(error);
   });
 console.log(createCard);
-// Function to get all tutors
 
-// Routes
+// Get route to enable register button functionality
+
+router.get("/register", async (req, res) => {
+  res.render("register");
+});
 
 // Router.get to fetch the data from the API that we created
 
