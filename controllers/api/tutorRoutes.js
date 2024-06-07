@@ -5,7 +5,7 @@ const { Tutor } = require('../../models');
 router.get('/', async (req, res) => {
     try {
         const tutorData = await Tutor.findAll({
-            include: [{all: true }]
+            include: [{all: true}]
         });
         res.status(200).json((tutorData));
     } catch (err) {res.status(500).json(err);}

@@ -23,6 +23,7 @@ router.post('/', async (req, res) => {
       instruments: req.body.instruments,
 
     });
+
     res.status(200).json({ message: `${req.body.email} has been successfully registered to TutorHub!` });
   } catch (err) {
     res.status(422).json({ message: "Sorry, your request could not be processed due to the following error - " + err });
