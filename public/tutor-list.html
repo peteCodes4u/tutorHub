@@ -32,19 +32,20 @@
                             <a class="nav-link" href="javascript:void(0)">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="javascript:void(0)">Tutor Search</a>
+                            <a class="nav-link" href="index.html">Tutor Search</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="javascript:void(0)">Our Developers</a>
+                            <a class="nav-link" href="developers.html">Our Developers</a>
                         </li>
                     </ul>
                     <div class="d-flex">
-                        <button type="button" class="badge rounded-pill mr-2 bg-info border border-white">Login</button>
-                        <button type="button" class="badge rounded-pill bg-danger border border-white">Register</button>
+                        <button type="button" class="login-button badge rounded-pill mr-2 bg-info border border-white">Login</button>
+                        <button type="button" class="register-button badge rounded-pill bg-danger border border-white">Register</button>
                     </div>
                 </div>
             </div>
         </nav>
+        <button id="get-tutors" action="/api/tutors" method="GET">Push</button>
         <!-- Container to hold cards that will display each individual tutor -->
         <div class="container">
             <!-- Row to hold the cards -->

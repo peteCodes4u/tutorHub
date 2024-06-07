@@ -9,7 +9,7 @@ const userCardRow = document.querySelector(".user-card");
 
 // This will provide a way to dynamically display each card
 async function createCard(user) {
-  const apiData = await fetch("localhost:5000/api/tutors");
+  const apiData = router.get();
   const card = `<div class="col-12 col-md-6 col-lg-4">
             <div class="card mb-2">
                 <div class="row g-4">
