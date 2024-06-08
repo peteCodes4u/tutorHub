@@ -1,0 +1,22 @@
+[
+    {
+        "tuor_id": 1,
+        "certification_id": 4
+    },
+    {
+        "tuor_id": 2,
+        "certification_id": 3
+    },
+    {
+        "tuor_id": 1,
+        "certification_id": 5
+    },
+    {
+        "tuor_id": 1,
+        "certification_id": 3
+    },
+    {
+        "tuor_id": 2,
+        "certification_id": 4
+    }
+]

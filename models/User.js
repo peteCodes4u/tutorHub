@@ -19,15 +19,18 @@ User.init(
     firstName: {
       type: DataTypes.STRING,
       allowNull: false,
+      primaryKey: true
     },
     lastName: {
       type: DataTypes.STRING,
       allowNull: false,
+      primaryKey: true
     },
     email: {
       type: DataTypes.STRING,
       allowNull: false,
       unique: true,
+      primaryKey: true,
       validate: {
         isEmail: true,
       },
@@ -38,10 +41,6 @@ User.init(
       validate: {
         len: [8],
       },
-    },
-    zipcode: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
     },
     userRole: {
       type: DataTypes.STRING,
