@@ -33,7 +33,7 @@ const userData = require("./userData.json");
 
 const seedDatabase = async () => {
   try {
-    await sequelize.sync({ force: true });
+    await sequelize.sync({ force: false });
 
     await Specialties.bulkCreate(specialtiesData, {
       individualHooks: true,
