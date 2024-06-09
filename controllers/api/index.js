@@ -12,9 +12,11 @@ const studentFavoritesRoutes = require("./studentFavoritesRoutes");
 const tutorCertificationsRoutes = require("./tutorCertificationsRoutes");
 const tutorCommentsRoutes = require("./tutorCommentsRoutes");
 const tutorInstrumentsRoutes = require("./tutorInstrumentsRoutes");
+const tutorPricesRoutes = require("./tutorPricesRoutes");
 const tutorSocialLinksRoutes = require("./tutorSocialLinksRoutes");
 const tutorSpecialtiesRoutes = require("./tutorSpecialtiesRoutes");
 
+// I'm woncering if there's a better way to do this that's less code?
 // Used router.use to use the routes
 router.use("/users", userRoutes);
 router.use("/registration", registrationRoutes);
@@ -27,6 +29,7 @@ router.use("/studentFavorites", studentFavoritesRoutes);
 router.use("/tutorCertifications", tutorCertificationsRoutes);
 router.use("/tutorComments", tutorCommentsRoutes);
 router.use("/tutorInstruments", tutorInstrumentsRoutes);
+router.use("/tutorPrices", tutorPricesRoutes);
 router.use("/tutorSocialLinks", tutorSocialLinksRoutes);
 router.use("/tutorSpecialties", tutorSpecialtiesRoutes);
 
