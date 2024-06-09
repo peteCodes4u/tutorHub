@@ -19,7 +19,7 @@ const {
 } = require("../models");
 
 const certsData = require("./certificationsData.json");
-const instrumentsData = require("./instrumentData.json");
+const instrumentData = require("./instrumentData.json");
 const specialtiesData = require("./specialtiesData.json");
 const studentData = require("./studentData.json");
 const studentFavorites = require("./studentFavoritesData.json");
@@ -75,7 +75,7 @@ const seedDatabase = async () => {
       returning: true,
     });
 
-    await Instrument.bulkCreate(instrumentsData, {
+    await Instrument.bulkCreate(instrumentData, {
       individualHooks: true,
       returning: true,
     });
