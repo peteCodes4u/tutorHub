@@ -16,6 +16,14 @@ User.init(
       primaryKey: true,
       autoIncrement: true,
     },
+
+    // for composit primary key
+    user_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+    },
+
     firstName: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -38,10 +46,6 @@ User.init(
       validate: {
         len: [8],
       },
-    },
-    zipcode: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
     },
     userRole: {
       type: DataTypes.STRING,

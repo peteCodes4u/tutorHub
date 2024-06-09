@@ -1,12 +1,11 @@
 
 [
   {
+    "user_id": 1,
     "firstName": "Pete",
     "lastName": "Smith",
     "email": "peter.appliedanalyticalsciences@gmail.com",
-    "password": "wordpass123",
     "zipcode": "34695",
-    "userRole": "Tutor",
     "specialty": "Composition",
     "region": "Tampa FL",
     "phone": "603-801-9877",
@@ -14,12 +13,11 @@
     "instruments": "guitar"
   },
   {
+    "user_id": 2,
     "firstName": "Stephanie",
     "lastName": "Carr",
-    "email": "instructor-steph@gmail.com",
-    "password": "password12345",
+    "email": "instructor-1@gmail.com",
     "zipcode": "34695",
-    "userRole": "Instructor",
     "specialty": "Strings Stage Performance / Orchestra",
     "region": "St Pete FL",
     "phone": null,

@@ -13,38 +13,29 @@ Tutor.init(
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      primaryKey: true,
       autoIncrement: true,
     },
+
+    user_id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+    },
+
     firstName: {
       type: DataTypes.STRING,
-      allowNull: false,
+      primaryKey: true,
     },
+
     lastName: {
       type: DataTypes.STRING,
-      allowNull: false,
+      primaryKey: true,
     },
     email: {
       type: DataTypes.STRING,
-      allowNull: false,
-      unique: true,
-      validate: {
-        isEmail: true,
-      },
-    },
-    password: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [8],
-      },
+      primaryKey: true,
     },
     zipcode: {
       type: DataTypes.INTEGER,
-      allowNull: false,
-    },
-    userRole: {
-      type: DataTypes.STRING,
       allowNull: false,
     },
     specialty: {
@@ -70,12 +61,6 @@ Tutor.init(
   },
   
   {
-    hooks: {
-      beforeCreate: async (newUserData) => {
-        newUserData.password = await bcrypt.hash(newUserData.password, 10);
-        return newUserData;
-      },
-    },
     sequelize,
     timestamps: false,
     freezeTableName: true,
