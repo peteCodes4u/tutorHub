@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Tutor extends Model {}
+class Student extends Model {}
 
-Tutor.init(
+Student.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -29,33 +29,9 @@ Tutor.init(
       type: DataTypes.STRING,
       primaryKey: true,
     },
-    zipcode: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
-    specialty: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    region: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    phone: {
-      type: DataTypes.STRING,
-      allowNull: true,
-    },
-    virtual: {
-      type: DataTypes.STRING,
-      allowNull: true,
-    },
-    instruments: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
     profile_pic: {
       type: DataTypes.STRING,
-      allowNull: true,
+      allowNull: true
     }
   },
   
@@ -64,8 +40,8 @@ Tutor.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'tutor',
+    modelName: 'student',
   }
 );
 
-module.exports = Tutor;
+module.exports = Student;

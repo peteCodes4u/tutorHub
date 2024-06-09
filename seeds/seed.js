@@ -2,11 +2,11 @@ require("dotenv").config({
   path: '../.env'
 })
 const sequelize = require('../config/connection');
-const { User } = require('../models');
-const { Tutor } = require('../models')
+const { User, Tutor, Student } = require('../models');
 
 const userData = require('./userData.json');
-const tutorData = require('./tutorData.json')
+const tutorData = require('./tutorData.json');
+const studentData = require('./studentData.json');
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
@@ -17,7 +17,10 @@ const seedDatabase = async () => {
   });
 
   await Tutor.bulkCreate(tutorData, {
-    individualHooks: true,
+    returning: true,
+  });
+
+  await Student.bulkCreate(studentData, {
     returning: true,
   });
 
