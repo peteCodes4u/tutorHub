@@ -8,6 +8,7 @@ const StudentFavorites = require("./StudentFavorites");
 const TutorCertifications = require("./TutorCertifications");
 const TutorComments = require("./TutorComments");
 const TutorInstrument = require("./TutorInstrument");
+const TutorPrices = require("./TutorPrices");
 const TutorSocialLinks = require("./TutorSocialLinks");
 const TutorSpecialties = require("./TutorSpecialties");
 
@@ -89,4 +90,5 @@ module.exports = {
   TutorInstrument,
   TutorSocialLinks,
   TutorSpecialties,
+  TutorPrices,
 };
