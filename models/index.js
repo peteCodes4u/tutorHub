@@ -1,6 +1,7 @@
 const User = require('./User');
 const Tutor = require('./Tutor');
 const Student = require('./Student');
+const Instrument = require('./Instrument');
 
 Tutor.belongsTo(User, {
    foreignKey:{
@@ -20,4 +21,4 @@ Student.belongsTo(User, {
 
 
 
-module.exports = { User, Tutor, Student };
+module.exports = { User, Tutor, Student, Instrument };
