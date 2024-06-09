@@ -39,10 +39,6 @@ User.init(
         len: [8],
       },
     },
-    zipcode: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
     userRole: {
       type: DataTypes.STRING,
       allowNull: false,

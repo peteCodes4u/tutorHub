@@ -1,30 +1,39 @@
 
 [
   {
-    "firstName": "Pete",
-    "lastName": "Smith",
-    "email": "peter.appliedanalyticalsciences@gmail.com",
-    "password": "wordpass123",
+    "profile_image": "Percussion 1.png",
     "zipcode": "34695",
-    "userRole": "Tutor",
-    "specialty": "Composition",
-    "region": "Tampa FL",
-    "phone": "603-801-9877",
-    "virtual": "Virtual or In Person",
-    "instruments": "guitar"
+    "phone": "555-123-1234",
+    "lesson_setting": "Student's Home",
+    "price": "$ ($30 or less)"
   },
   {
-    "firstName": "Stephanie",
-    "lastName": "Carr",
-    "email": "instructor-steph@gmail.com",
-    "password": "password12345",
+    "profile_image": "Oboe 1.png",
     "zipcode": "34695",
-    "userRole": "Instructor",
-    "specialty": "Strings Stage Performance / Orchestra",
-    "region": "St Pete FL",
-    "phone": null,
-    "virtual": "Virtual or In Person",
-    "instruments": "Cello"
+    "phone": "555-123-1234",
+    "lesson_setting": "Teacher's Studio",
+     "price": "$$ ($35 to $55)"
+  },
+  {
+    "profile_image": "Piano 1.png",
+    "zipcode": "34695",
+    "phone": "555-123-1234",
+    "lesson_setting": "Virtual",
+    "price": "$$$ ($60 to $80)"
+  },
+  {
+    "profile_image": "Horn 1.png",
+    "zipcode": "34695",
+    "phone": "555-123-1234",
+    "lesson_setting": "Virtual",
+    "price": "$$$$ ($85+)"
+  },
+  {
+    "profile_image": "Guitar 1.png",
+    "zipcode": "34695",
+    "phone": "555-123-1234",
+    "lesson_setting": "Teacher's Studio",
+    "price": "$$$$ ($85+)"
   }
 ]
 
