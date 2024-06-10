@@ -10,7 +10,7 @@
     "region": "Tampa FL",
     "phone": "603-801-9877",
     "virtual": "Virtual or In Person",
-    "instruments": "guitar",
+    "instrument_id": 13,
     "profile_pic": "Guitar 3"
   },
   {
@@ -23,7 +23,7 @@
     "region": "St Pete FL",
     "phone": null,
     "virtual": "Virtual or In Person",
-    "instruments": "Cello",
+    "instrument_id": 17,
     "profile_pic": "Cello 2"
   }
 ]

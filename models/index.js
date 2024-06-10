@@ -19,6 +19,4 @@ Student.belongsTo(User, {
  targetKey: 'user_id'
  });
 
-
-
 module.exports = { User, Tutor, Student, Instrument };

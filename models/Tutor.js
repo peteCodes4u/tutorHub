@@ -49,9 +49,12 @@ Tutor.init(
       type: DataTypes.STRING,
       allowNull: true,
     },
-    instruments: {
-      type: DataTypes.STRING,
-      allowNull: false,
+    instrument_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'instrument',
+        key: 'id'
+      }
     },
     profile_pic: {
       type: DataTypes.STRING,

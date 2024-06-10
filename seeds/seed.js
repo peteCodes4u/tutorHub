@@ -17,6 +17,10 @@ const seedDatabase = async () => {
     returning: true,
   });
 
+  await Instrument.bulkCreate(instrumentData, {
+    returning: true,
+  });
+
   await Tutor.bulkCreate(tutorData, {
     returning: true,
   });
@@ -25,10 +29,6 @@ const seedDatabase = async () => {
     returning: true,
   });
 
-  await Instrument.bulkCreate(instrumentData, {
-    returning: true,
-  });
-  
   process.exit(0);
 };
 
