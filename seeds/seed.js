@@ -22,7 +22,7 @@ const certsData = require("./certificationsData.json");
 const instrumentData = require("./instrumentData.json");
 const specialtiesData = require("./specialtiesData.json");
 const studentData = require("./studentData.json");
-const studentFavorites = require("./studentFavoritesData.json");
+const studentFavoritesData = require("./studentFavoritesData.json");
 const tutorData = require("./tutorData.json");
 const tutorCertificationsData = require("./tutorCertificationsData.json");
 const tutorCommentsData = require("./tutorCommentsData.json");
@@ -33,7 +33,7 @@ const userData = require("./userData.json");
 
 const seedDatabase = async () => {
   try {
-    await sequelize.sync({ force: false });
+    await sequelize.sync({ force: true });
 
     await Specialties.bulkCreate(specialtiesData, {
       individualHooks: true,
@@ -45,7 +45,7 @@ const seedDatabase = async () => {
       returning: true,
     });
 
-    await StudentFavorites.bulkCreate(studentFavorites, {
+    await StudentFavorites.bulkCreate(studentFavoritesData, {
       individualHooks: true,
       returning: true,
     });
