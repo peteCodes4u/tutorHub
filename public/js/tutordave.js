@@ -6,11 +6,8 @@ const interestList = document.querySelector("#interestlist");
 
 // Function to dynamically populate instrument choices from available instruments in table
 async function createInstrumentSearch() {
-  const apiData = await fetch("./api/instruments");
-  var data = await apiData.json();
-  console.log(data);
-  let length = data.length;
-  console.log(length);
+    const apiData = await fetch("./api/instruments");
+    const data = await apiData.json();
 
   for (let i = 0; i < data.length; i++) {
     const listItem = `
@@ -133,6 +130,7 @@ async function getByCertification(certificationChoice) {
     cardDeck.innerHTML = "";
     cardCreate(data);
 }
+
 async function getBySpecialty(specialtyChoice) {
     specialtyChoice = interestList.value; 
     if (specialtyChoice === "0"){
