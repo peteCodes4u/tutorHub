@@ -3,7 +3,8 @@
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
-  font-variation-settings: "wdth" 100;
+  font-variation-settings:
+    "wdth" 100;
 }
 
 .open-sans-regular-normal {
@@ -11,7 +12,8 @@
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-variation-settings: "wdth" 100;
+  font-variation-settings:
+    "wdth" 100;
 }
 
 .open-sans-semibold-normal {
@@ -19,7 +21,8 @@
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
-  font-variation-settings: "wdth" 100;
+  font-variation-settings:
+    "wdth" 100;
 }
 
 .open-sans-bold-normal {
@@ -27,7 +30,8 @@
   font-optical-sizing: auto;
   font-weight: 800;
   font-style: normal;
-  font-variation-settings: "wdth" 100;
+  font-variation-settings:
+    "wdth" 100;
 }
 
 .open-sans-light-semicondensed {
@@ -35,7 +39,8 @@
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
-  font-variation-settings: "wdth" 87.5;
+  font-variation-settings:
+    "wdth" 87.5;
 }
 
 .open-sans-regular-semicondensed {
@@ -43,7 +48,8 @@
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-variation-settings: "wdth" 87.5;
+  font-variation-settings:
+    "wdth" 87.5;
 }
 
 .open-sans-semibold-semicondensed {
@@ -51,7 +57,8 @@
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
-  font-variation-settings: "wdth" 87.5;
+  font-variation-settings:
+    "wdth" 87.5;
 }
 
 .open-sans-bold-semicondensed {
@@ -59,7 +66,8 @@
   font-optical-sizing: auto;
   font-weight: 800;
   font-style: normal;
-  font-variation-settings: "wdth" 87.5;
+  font-variation-settings:
+    "wdth" 87.5;
 }
 
 .open-sans-light-condensed {
@@ -67,7 +75,8 @@
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
-  font-variation-settings: "wdth" 75;
+  font-variation-settings:
+    "wdth" 75;
 }
 
 .open-sans-regular-condensed {
@@ -75,7 +84,8 @@
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-variation-settings: "wdth" 75;
+  font-variation-settings:
+    "wdth" 75;
 }
 
 .open-sans-semibold-condensed {
@@ -83,7 +93,8 @@
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
-  font-variation-settings: "wdth" 75;
+  font-variation-settings:
+    "wdth" 75;
 }
 
 .open-sans-bold-condensed {
@@ -91,7 +102,8 @@
   font-optical-sizing: auto;
   font-weight: 800;
   font-style: normal;
-  font-variation-settings: "wdth" 75;
+  font-variation-settings:
+    "wdth" 75;
 }
 
 .brush {
@@ -108,23 +120,14 @@
 
 h1 {
   font-family: "Comforter Brush", cursive;
-  font-size: 75px;
   font-weight: 400;
   font-style: normal;
 }
 
-h2,
-h3,
-h4,
-h5,
-h6 {
+h2, h3, h4, h5, h6 {
   font-family: "Patrick Hand SC", cursive;
   font-weight: 400;
   font-style: normal;
-}
-footer {
-  font-family: "Patrick Hand SC", cursive;
-  font-size: 20px;
 }
 
 .normal-text {
@@ -132,7 +135,8 @@ footer {
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
-  font-variation-settings: "wdth" 100;
+  font-variation-settings:
+    "wdth" 100;
 }
 
 .light-text {
@@ -140,5 +144,6 @@ footer {
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
-  font-variation-settings: "wdth" 87.5;
+  font-variation-settings:
+    "wdth" 87.5;
 }

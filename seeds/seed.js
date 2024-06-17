@@ -11,8 +11,7 @@ const {
   TutorCertification, 
   Specialty, 
   TutorSpecialty,
-  TutorLink,
-TutorReview } 
+  TutorLink } 
   
   = require('../models');
 
@@ -25,7 +24,6 @@ const tutorCerificationData = require('./tutorCertificationData.json');
 const specialtyData = require('./specialtyData.json');
 const tutorSpecialtyData = require('./tutorSpecialtyData.json');
 const tutorLinkData = require('./tutorLinkData.json');
-const tutorReviewData = require('./tutorReview.json');
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
@@ -67,9 +65,10 @@ const seedDatabase = async () => {
     returning: true,
   });
 
-  await TutorReview.bulkCreate(tutorReviewData, {
+  await Instrument.bulkCreate(instrumentData, {
+    individualHooks: true,
     returning: true,
-  })
+  });
 
   process.exit(0);
 };

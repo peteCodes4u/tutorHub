@@ -9,12 +9,11 @@ Instrument.init(
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      autoIncrement: true,
       primaryKey: true,
+      autoIncrement: true,
     },
     instrument_name: {
       type: DataTypes.STRING,
-      allowNull: false,
     },
   },
   {

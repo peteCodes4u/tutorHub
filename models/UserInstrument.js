@@ -14,7 +14,6 @@ UserInstrument.init(
     },
     user_id: {
       type: DataTypes.INTEGER,
-      allowNull: false,
       references: {
         model: 'user',
         key: 'id'
@@ -22,7 +21,6 @@ UserInstrument.init(
     },
     instrument_id: {
       type: DataTypes.INTEGER,
-      allowNull: false,
       references: {
         model: 'instrument',
         key: 'id',
