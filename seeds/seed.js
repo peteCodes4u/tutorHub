@@ -11,20 +11,22 @@ const {
   TutorCertification,
   Specialty,
   TutorSpecialty,
+  LinkPlatform,
   TutorLink,
   TutorReview,
 } = require("../models");
 
-const userData = require("./userData.json");
-const roleData = require("./roleData.json");
-const instrumentData = require("./instrumentData.json");
-const userInstrumentData = require("./userInstrumentData.json");
-const certificationData = require("./certificationData.json");
-const tutorCertificationData = require("./tutorCertificationData.json");
-const specialtyData = require("./specialtyData.json");
-const tutorSpecialtyData = require("./tutorSpecialtyData.json");
-const tutorLinkData = require("./tutorLinkData.json");
-const tutorReviewData = require("./tutorReview.json");
+const userData = require('./userData.json');
+const roleData = require('./roleData.json');
+const instrumentData = require('./instrumentData.json');
+const userInstrumentData = require('./userInstrumentData.json');
+const certificationData = require('./certificationData.json');
+const tutorCerificationData = require('./tutorCertificationData.json');
+const specialtyData = require('./specialtyData.json');
+const tutorSpecialtyData = require('./tutorSpecialtyData.json');
+const platformLinkData = require('./platformLinkData.json');
+const tutorLinkData = require('./tutorLinkData.json');
+const tutorReviewData = require('./tutorReview.json');
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
@@ -59,6 +61,10 @@ const seedDatabase = async () => {
   });
 
   await TutorSpecialty.bulkCreate(tutorSpecialtyData, {
+    returning: true,
+  });
+
+  await LinkPlatform.bulkCreate(platformLinkData, {
     returning: true,
   });
 

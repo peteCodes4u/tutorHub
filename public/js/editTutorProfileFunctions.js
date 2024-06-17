@@ -1,13 +1,13 @@
-const addInstrumentButton = document.getElementById("addInstrument");
-const addCertificationButton = document.getElementById("addCertification");
-const addSpecialtyButton = document.getElementById("addSpecialty");
-const addLinkButton = document.getElementById("addLink");
-const removeInstrumentButton = document.getElementById("removeInstrument");
-const removeCertificationButton = document.getElementById(
-  "removeCertification"
-);
-const updateUserInfoButton = document.getElementById("updateUserInfo");
-const changePasswordButton = document.getElementById("changePassword");
+const addInstrumentButton = document.getElementById('addInstrument');
+const addCertificationButton = document.getElementById('addCertification');
+const addSpecialtyButton = document.getElementById('addSpecialty');
+const addLinkButton = document.getElementById('addLink');
+const removeInstrumentButton = document.getElementById('removeInstrument');
+const removeCertificationButton = document.getElementById('removeCertification');
+const updateUserInfoButton = document.getElementById('updateUserInfo');
+const changePasswordButton = document.getElementById('changePassword');
+const removeSpecialtyButton = document.getElementById('removeSpecialty');
+const removeLinkButton = document.getElementById('removeLink');
 
 // change password button
 changePasswordButton.addEventListener("click", async function () {
@@ -71,32 +71,29 @@ updateUserInfoButton.addEventListener("click", async function () {
   const price = document.getElementById("price").value;
   const lesson_setting = document.getElementById("lesson-setting-list").value;
 
-  const response = await fetch(`./api/users/${user_id}`, {
-    method: "PUT",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      profile_img: profile_img,
-      salutation: salutation,
-      firstname: firstname,
-      lastname: lastname,
-      email: email,
-      zipcode: zipcode,
-      phone: phone,
-      price: price,
-      lesson_setting: lesson_setting,
-    }),
-  });
-  if (response.ok) {
-    alert("you have successfully updated your personal information!");
-    window.localStorage.setItem("username", JSON.stringify(email));
-    window.location.reload();
-  } else {
-    alert(
-      "😵 Sorry, something went wrong, please ensure you are logged in, refresh the browser and try again 😵"
-    );
-  }
+    const response = await fetch(`./api/users/${user_id}`, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            profile_img: profile_img,
+            salutation: salutation,
+            firstname: firstname,
+            lastname: lastname,
+            email: email,
+            zipcode: zipcode,
+            phone: phone,
+            price: price,
+            lesson_setting: lesson_setting
+
+        })
+    });
+    if(response.ok) { alert ('you have successfully updated your personal information!')
+        window.localStorage.setItem('username', JSON.stringify(email))
+        window.location.reload();
+    }
+    else {alert('😵 Sorry, something went wrong, please ensure you are logged in, refresh the browser and try again 😵')}
 });
 
 // add instrument
@@ -145,27 +142,23 @@ removeInstrumentButton.addEventListener("click", async function () {
 });
 
 // add certification
-addCertificationButton.addEventListener("click", async function () {
-  const certification_id = document.getElementById("certification-list").value;
-  const response = await fetch("./api/tutorCertification", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      user_id: user_id,
-      certification_id: certification_id,
-    }),
-  });
-  if (response.ok) {
-    alert("😃 you have successfully added a certification to your profile! 😃");
-  } else if (response.status === 404) {
-    alert(
-      "Sorry, it does not appear that this certification has been associated with your profile in our records 🤔"
-    );
-  } else if (response.status === 422) {
-    alert("This certification has already been added to your profile 😊");
-  }
+addCertificationButton.addEventListener("click", async function(){
+
+    const certification_id = document.getElementById('certification-list').value;
+    const response = await fetch('./api/tutorCertification', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ user_id: user_id, certification_id: certification_id})
+    });
+    if(response.ok) { 
+        alert ('😃 you have successfully added a certification to your profile! 😃')
+    } else if (response.status === 404) {
+        alert('Sorry, it does not appear that this certification has been associated with your profile in our records 🤔');
+    } else if (response.status === 422) {
+        alert('This certification has already been added to your profile 😊');
+    }
 });
 
 // remove certification
@@ -194,32 +187,31 @@ removeCertificationButton.addEventListener("click", async function () {
 });
 
 // add specialty
-addSpecialtyButton.addEventListener("click", async function () {
-  const specialty_id = document.getElementById("specialty-list").value;
-  const response = await fetch("./api/tutorSpecialty", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ user_id: user_id, specialty_id: specialty_id }),
-  });
-  if (response.ok) {
-    alert("you have successfully added a specialty to your profile!");
-  }
+addSpecialtyButton.addEventListener("click", async function(){
+   
+    const specialty_id = document.getElementById('specialty-list').value;
+    const response = await fetch('./api/tutorSpecialty', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ user_id: user_id, specialty_id: specialty_id})
+    });
+    if(response.ok) { alert ('you have successfully added a specialty to your profile!')}
 });
 
 // add link
-addLinkButton.addEventListener("click", async function () {
-  const link = document.getElementById("link").value;
-  const platform = document.getElementById("platform").value;
-  const response = await fetch("./api/tutorLink", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ user_id: user_id, platform: platform, link: link }),
-  });
-  if (response.ok) {
-    alert("you have successfully added a link to your profile!");
-  }
+addLinkButton.addEventListener("click", async function(){
+
+    const link = document.getElementById('link').value;
+    const platform =  document.getElementById('platform').value;
+    const response = await fetch('./api/tutorLink', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ user_id: user_id, platform: platform, link: link})
+    });
+    if(response.ok) { alert ('you have successfully added a link to your profile!')}
 });
+
