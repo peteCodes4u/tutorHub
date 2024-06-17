@@ -44,9 +44,8 @@ body {
 }
 
 .hero {
-    margin-top: 5vh;
-    margin-bottom: 5vh;
-    margin-left: 2vh;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
 }
 
 .hero img {
@@ -56,7 +55,9 @@ body {
 #searchArea {
     text-align: center;
 }
-
+.tutor-btn {
+  font-size: 30px;
+}
 .btn {
     background-color: var(--clr-accent1);
     color: var(--clr-light);
@@ -92,6 +93,16 @@ body {
     border-color: transparent;
 }
 
+/* Changed the color of the find a tutor button */
+#searchArea a {
+  color: var(--clr-light);
+}
+
+/* Added a hover effect to change the color to main font color of page */
+#searchArea a:hover {
+  color: var(--clr-accent1);
+}
+
 /* modal related styles */
 .modal-header{
     color:var(--clr-accent1);
@@ -119,4 +130,12 @@ cursor:pointer;
 .searchBar {
     display: flex;
 
+}
+
+.carousel-control-prev {
+  justify-content: left;
+}
+
+.carousel-control-next {
+  justify-content: right;
 }

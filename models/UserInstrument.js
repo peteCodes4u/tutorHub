@@ -1,6 +1,6 @@
-const { Model, DataTypes } = require('sequelize');
+const { Model, DataTypes } = require("sequelize");
 
-const sequelize = require('../config/connection');
+const sequelize = require("../config/connection");
 
 class UserInstrument extends Model {}
 
@@ -8,22 +8,24 @@ UserInstrument.init(
   {
     id: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
       primaryKey: true,
       autoIncrement: true,
     },
     user_id: {
       type: DataTypes.INTEGER,
+      allowNull: true,
       references: {
-        model: 'user',
-        key: 'id'
+        model: "user",
+        key: "id",
       },
     },
     instrument_id: {
       type: DataTypes.INTEGER,
+      allowNull: false,
       references: {
-        model: 'instrument',
-        key: 'id',
+        model: "instrument",
+        key: "id",
       },
     },
   },
@@ -32,7 +34,7 @@ UserInstrument.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'user_instrument',
+    modelName: "user_instrument",
   }
 );
 
